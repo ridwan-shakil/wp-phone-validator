@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<ruleset name="WP Phone Validator Coding Standards">
+    <!-- Description -->
+    <description>WordPress plugin coding standards for WP Phone Validator plugin.</description>
+
+    <!-- Include WordPress Coding Standards -->
+    <rule ref="WordPress"/>
+
+    <!-- Ignore vendor folder -->
+    <exclude-pattern>vendor/*</exclude-pattern>
+
+    <!-- Include plugin files -->
+    <file>wp-phone-validator.php</file>
+    <file>includes/*</file>
+    <file>assets/js/*</file>
+    <file>assets/css/*</file>
+
+    <!-- Show warnings as well as errors -->
+    <arg value="--report=full"/>
+
+    <!-- Exclude certain checks if needed -->
+    <exclude name="Generic.Files.LineLength"/>
+    <exclude name="Generic.Formatting.DisallowMultipleStatements"/>
+</ruleset>
