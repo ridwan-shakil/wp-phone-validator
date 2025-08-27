@@ -70,15 +70,6 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
-        'select2/select2' => array(
-            'pretty_version' => '4.0.13',
-            'version' => '4.0.13.0',
-            'reference' => '45f2b83ceed5231afa7b3d5b12b58ad335edd82e',
-            'type' => 'component',
-            'install_path' => __DIR__ . '/../select2/select2',
-            'aliases' => array(),
-            'dev_requirement' => false,
-        ),
         'squizlabs/php_codesniffer' => array(
             'pretty_version' => '3.13.2',
             'version' => '3.13.2.0',

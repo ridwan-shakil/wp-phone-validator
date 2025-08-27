@@ -24,17 +24,26 @@ class settings {
     public function wph_settings_content() { ?>
         <div class="wrap">
             <h1><?php esc_html_e('Allow Orders From Below Countries', 'wp-phone-validator'); ?></h1>
-            <?php //settings_errors(); ?>
+            <?php //settings_errors(); 
+            ?>
             <form method="POST" action="options.php">
                 <?php
+                var_dump(get_option('wph_custom'));
+
                 settings_fields('wph_custom');
                 do_settings_sections('wph_custom');
                 submit_button();
+
                 ?>
             </form>
         </div>
 <?php }
 
+
+
+    /**
+     * Create Settings
+     */
     public function wph_setup_sections() {
         add_settings_section(
             'wph_custom_section',
@@ -86,7 +95,7 @@ class settings {
                     $attr    = '';
                     $options = '';
 
-                    foreach ($field['options'] as $key => $label) {
+                    foreach ($field['options'] as $key => $label) { 
                         $selected = '';
                         if (is_array($value) && in_array($key, $value)) {
                             $selected = 'selected="selected"';

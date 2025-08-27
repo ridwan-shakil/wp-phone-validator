@@ -13,8 +13,7 @@
     ],
     "require": {
         "php": ">=7.4",
-        "giggsey/libphonenumber-for-php": "^8.13",
-        "select2/select2": "^4.0"
+        "giggsey/libphonenumber-for-php": "^8.13"
     },
     "autoload": {
         "psr-4": {

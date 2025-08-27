@@ -30,7 +30,7 @@ class Frontend {
      * Restrict available billing countries to admin-selected ones
      */
     public function restrict_checkout_countries($countries) {
-        $options   = get_option('wp_phone_validator_settings', []);
+        $options   = get_option('wph_custom', []);
         $allowed   = ! empty($options['countries']) ? $options['countries'] : ['BD'];
 
         $allowed = array_map('strtoupper', $allowed);
@@ -73,7 +73,7 @@ class Frontend {
         );
 
         // Admin-selected allowed countries
-        $options   = get_option('wp_phone_validator_settings', []);
+        $options   = get_option('wph_custom', []);
         $countries = ! empty($options['countries']) ? $options['countries'] : ['BD'];
 
         // Pass data to JS
@@ -101,7 +101,7 @@ class Frontend {
         }
 
         // Admin-selected allowed countries
-        $options   = get_option('wp_phone_validator_settings', []);
+        $options   = get_option('wph_custom', []);
         $countries = ! empty($options['countries']) ? $options['countries'] : ['BD'];
 
         $validator = new Validator();
